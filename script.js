@@ -1,5 +1,18 @@
 // add javascript here
 date.textContent = time();
+let userName = "";
+do {
+    userName = prompt("Enter your name:");
+    if (userName && userName.trim() !== "") {
+        userName = userName.trim();
+        userName = userName[0].toUpperCase() + userName.slice(1).toLowerCase();
+        break;
+    } else {
+        alert("Please enter your name to continue!");
+    }
+} while (true);
+msg.textContent = `Welcome, ${userName}! Select a level to begin.`;
+
 
 // global variables/constants
 let score, answer, level; 
